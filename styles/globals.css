@@ -8,8 +8,18 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  background: linear-gradient(
+    90deg,
+    rgba(9, 13, 45, 1) 60%,
+    rgba(3, 8, 85, 1) 100% /* rgba(0, 48, 121, 1) 100% */
+  );
 }
 
+@font-face {
+  font-family: "blast";
+  src: url("/fonts/HellostyBlast.ttf");
+}
 a {
   color: inherit;
   text-decoration: none;
