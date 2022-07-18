@@ -19,7 +19,7 @@ const NavBar: NextComponentType = () => {
   return (
     <nav
       className={
-        (scroll ? "bg-[#e1dcd8] " : "") +
+        (scroll ? "bg-[#090336] " : "") +
         (navbar ? "h-80" : "h-30 ") +
         " sticky top-0 z-50 flex flex-col lg:flex-row transition-[height] lg:h-30"
       }

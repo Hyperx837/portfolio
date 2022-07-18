@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-page-custom-font */
+import About from "components/About";
 import type { NextPage } from "next";
 import Head from "next/head";
-import NavBar from "../components/NavBar";
 import styles from "styles/Home.module.css";
+import NavBar from "../components/NavBar";
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <NavBar />
+        <About />
       </main>
 
       <footer className={styles.footer}></footer>
