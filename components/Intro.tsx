@@ -42,7 +42,7 @@ const About = () => {
         </span>
         <TypeWriter />
         <button className="btn mx-auto lg:mx-0 py-4 mt-20 w-96 ">
-          Let's Chat
+          Let&apos;s Chat
         </button>
       </div>
     </div>
