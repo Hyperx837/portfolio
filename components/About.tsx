@@ -1,52 +1,37 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { useTypewriter } from "react-simple-typewriter";
-import TypeWriter from "./TypeWriter";
-
-const About = () => {
-  const [color, setColor] = useState("");
-  const { text, count } = useTypewriter({
-    words: ["Developer", "Freelancer", "Programmer", "Student"],
-    loop: 0,
-  });
-
-  useEffect(() => {
-    let colors = ["yellow", "blue", "green", "red"];
-    setColor(`text-${colors[count % 4]}`);
-  }, [count]);
-
-  return (
-    <div
-      className="flex lg:flex-row pl-20  justify-around flex-col-reverse  "
-      id="about"
-    >
-      <div className="flex justify-center lg:w-[45%] sm:w-full sm:mt-20 lg:m-0 overflow-clip rounded-full">
+const About = () => (
+  <div className="flex flex-col bg-black h-[50rem] w-full lg:p-20">
+    <span className="text-[4rem] lg:text-[5rem]  underline font-[blast]">
+      About Me
+    </span>
+    <div className="flex w-full mt-10">
+      <div className="rounded-2xl w-[430px] h-[400px] overflow-clip mr-20 grayscale">
         <Image
-          src="/images/avatar3.png"
-          alt="pic of my avatar"
-          width={560}
-          height={630}
+          src="/images/me.png"
+          width={430}
+          height={400}
+          alt="picture of me"
         />
       </div>
-      <div className="pl-2 flex flex-col w-full lg:w-[55%] pt-16">
-        <span className="text-[2.8rem] md:text-[4rem] lg:text-[4.5rem]  font-[Poppins]  leading-[4rem] lg:leading-[5rem]  mx-auto lg:mx-0 text-center lg:text-left text-glow">
-          I am
-          <br />
-          <span className="font-[brussels] text-gradient">
-            Anupama Dissanayake
-          </span>
-        </span>
-        <span className="flex text-[2.8rem] md:text-[4rem] lg:text-[3rem]  font-[Poppins]  leading-[4rem] lg:leading-[5rem]  mx-auto lg:mx-0 text-center lg:text-left">
-          I am a <span className={`${color} ml-4`}> {text}</span>
-          <span className={`${color} blink`}>_</span>
-        </span>
-        <TypeWriter />
-        <button className="btn mx-auto lg:mx-0 py-4 mt-20 w-64 ">
-          Hire Me
-        </button>
+      <div className="font-[Montserrat] text-lg w-[50rem] ">
+        <p>
+          Hi there I&apos;m Anupama. A student in Sri Lanka. I am currently
+          studying mathematics for my higher studies. I am 17 years old and I
+          expect to graduate on the year 2024.
+        </p>
+        <p className="mt-5 first-letter:ml-10">
+          I have used python for 2 years, and Javascript for about 1.5 years. I
+          build bots (discord.py), scrapers, scripting and other automation
+          stuff with python. and with Javascript I build front-end websites
+          using frameworks like Next.js and React. I also am an open source
+          collaborator and a Linux enthusiast (I use Arch btw).
+        </p>
+        <p className="text-glow mt-10">
+          <span className="text-gradient">Fun Fact:</span> I am a PSG fan and I
+          am something of a right winger myself ; )
+        </p>
       </div>
     </div>
-  );
-};
-
+  </div>
+);
 export default About;

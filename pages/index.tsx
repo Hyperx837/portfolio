@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-page-custom-font */
+import Intro from "components/Intro";
 import About from "components/About";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <NavBar />
+        <Intro />
         <About />
       </main>
 

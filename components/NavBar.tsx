@@ -19,15 +19,17 @@ const NavBar: NextComponentType = () => {
   return (
     <nav
       className={
-        (scroll ? "bg-[#090336] " : "") +
-        (navbar ? "h-80" : "h-30 ") +
-        " sticky top-0 z-50 flex flex-col lg:flex-row transition-[height] lg:h-30"
+        (scroll ? "backdrop-blur-xl lg:h-20 " : "lg:h-32 ") +
+        (navbar ? "h-80" : "h-32 ") +
+        " sticky top-0 z-50 flex flex-col lg:flex-row transition-[height]"
       }
     >
       <NavItem
         navID="#top"
-        className="font-[blast] lg:block px-6 lg:px-14 py-6 cursor-pointer  text-center h-full whitespace-nowrap text-[3rem] mr-auto"
+        // className="flex font-[blast] lg:flex  px-6 lg:px-14 my-auto py-1 cursor-pointer  text-center h-full whitespace-nowrap text-[3rem] mr-auto"
+        className=" font-[blast] mr-auto flex px-6 lg:px-14 py-6 cursor-pointer h-30  whitespace-nowrap  leading-10  text-[3rem]"
         content="Anupama D."
+        noUnderline
       />
       <NavItem content="About Me" nav={navbar} />
       <NavItem content="My Work" nav={navbar} />
