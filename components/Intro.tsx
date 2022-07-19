@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useTypewriter } from "react-simple-typewriter";
-import TypeWriter from "./TypeWriter";
 
 const About = () => {
   const [color, setColor] = useState("");
