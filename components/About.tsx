@@ -7,7 +7,7 @@ const About = () => (
     <div className="flex w-full mt-10">
       <div className="rounded-2xl w-[430px] h-[400px] overflow-clip mr-20 grayscale">
         <Image
-          src="/images/me.png"
+          src="/images/me.webp"
           width={430}
           height={400}
           alt="picture of me"
