@@ -39,7 +39,6 @@ const About = () => {
           I am a <span className={`${color} ml-4`}> {text}</span>
           <span className={`${color} blink`}>_</span>
         </span>
-        <TypeWriter />
         <button className="btn mx-auto lg:mx-0 py-4 mt-20 w-96 ">
           Let&apos;s Chat
         </button>
