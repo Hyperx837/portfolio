@@ -38,12 +38,12 @@ const About = () => {
         </span>
         <span className="flex flex-col lg:flex-row text-[2.8rem] md:text-[4rem] lg:text-[3rem]  font-[Poppins]  leading-[4rem] lg:leading-[5rem]  mx-auto lg:mx-0 text-center lg:text-left">
           <span>I am a</span>
-          <div>
-            <span className={`${color} ml-4`}>{text}</span>
-            <span className={`${color} blink`}>_</span>
+          <div className={color}>
+            <span className="ml-4">{text}</span>
+            <span className="blink">_</span>
           </div>
         </span>
-        <button className="btn mx-auto lg:mx-0 lg:py-4 mt-20 w-72 lg:w-96 ">
+        <button className="btn mx-auto lg:mx-0 lg:py-4 mt-20 w-72 lg:w-96 h-16">
           Let&apos;s Chat
         </button>
         <TypeWriter />
