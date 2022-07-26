@@ -1,4 +1,5 @@
 import { NextComponentType } from "next";
+import { AiOutlineBars } from "react-icons/ai";
 import NavItem from "./NavItem";
 
 import { useEffect, useState } from "react";
@@ -19,18 +20,19 @@ const NavBar: NextComponentType = () => {
   return (
     <nav
       className={
-        (scroll ? "backdrop-blur-xl lg:h-20 " : "lg:h-32 ") +
-        (navbar ? "h-80" : "h-32 ") +
-        " sticky top-0 z-50 flex flex-col lg:flex-row transition-[height]"
+        (scroll ? "backdrop-blur-xl " : "") +
+        (navbar ? "h-80" : "h-20") +
+        " lg:h-20 sticky top-0 z-50 flex flex-col lg:flex-row w-full transition-all"
       }
     >
       <NavItem
         navID="#top"
-        // className="flex font-[blast] lg:flex  px-6 lg:px-14 my-auto py-1 cursor-pointer  text-center h-full whitespace-nowrap text-[3rem] mr-auto"
-        className=" font-[blast] mr-auto flex px-6 lg:px-14 py-6 cursor-pointer h-30  whitespace-nowrap  leading-10  text-[3rem]"
-        content="Anupama D."
+        className="font-[blast] mr-auto mt-1 flex flex-row px-6 lg:px-14 cursor-pointer h-fit text-[3rem] w-full lg:w-auto justify-between"
         noUnderline
-      />
+      >
+        <span>Anupama D.</span>
+        <AiOutlineBars className="w-12 my-auto lg:hidden" onClick={popUpNav} />
+      </NavItem>
       <NavItem content="About Me" nav={navbar} />
       <NavItem content="My Work" nav={navbar} />
       <NavItem content="Contact Me" nav={navbar} />

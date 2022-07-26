@@ -1,11 +1,11 @@
 import Image from "next/image";
 const About = () => (
-  <div className="flex flex-col bg-black h-[50rem] w-full lg:p-20">
-    <span className="text-[4rem] lg:text-[5rem]  underline font-[blast]">
+  <div className="flex flex-col bg-black  w-full lg:p-20">
+    <span className="text-[4rem] lg:text-[5rem]  underline font-[blast] text-center">
       About Me
     </span>
-    <div className="flex w-full mt-10">
-      <div className="rounded-2xl w-[430px] h-[400px] overflow-clip mr-20 grayscale">
+    <div className="flex flex-col lg:flex-row w-full mt-10">
+      <div className="rounded-2xl  mb-10 w-[330px] h-[310px] lg:w-[430px] lg:h-[400px] overflow-clip lg:mr-20 grayscale mx-auto">
         <Image
           src="/images/me.webp"
           width={430}
@@ -13,7 +13,7 @@ const About = () => (
           alt="picture of me"
         />
       </div>
-      <div className="font-[Montserrat] text-lg w-[50rem] ">
+      <div className="font-[Montserrat] text-lg w-96 lg:w-[50rem] mx-auto">
         <p>
           Hi there I&apos;m Anupama. A student in Sri Lanka. I am currently
           studying mathematics for my higher studies. I am 17 years old and I
