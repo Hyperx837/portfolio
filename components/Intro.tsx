@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useTypewriter } from "react-simple-typewriter";
+import { openURL } from "utils";
 import TypeWriter from "./TypeWriter";
 
 const About = () => {
@@ -16,10 +17,7 @@ const About = () => {
   }, [count]);
 
   return (
-    <div
-      className="flex lg:flex-row lg:pl-20  justify-around flex-col  mb-20"
-      id="about"
-    >
+    <div className="flex lg:flex-row lg:pl-20  justify-around flex-col  mb-20">
       <div className="flex justify-center lg:w-[45%] sm:w-full sm:mt-20 lg:m-0 overflow-clip rounded-full">
         <Image
           src="/images/avatar.webp"
@@ -44,7 +42,10 @@ const About = () => {
             <span className="blink">_</span>
           </div>
         </span>
-        <button className="btn mx-auto lg:mx-0 lg:py-4 mt-20 w-72 lg:w-96 h-16">
+        <button
+          className="btn mx-auto lg:mx-0 lg:py-4 mt-20 w-72 lg:w-96 h-16"
+          onClick={openURL("mailto:anup.d4015@gmail.com")}
+        >
           Let&apos;s Chat
         </button>
         <TypeWriter />

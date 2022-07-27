@@ -16,7 +16,11 @@ const NavBar: NextComponentType = () => {
   const popUpNav = () => {
     setNavbar(!navbar);
   };
-
+  const scrollTop = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  };
   return (
     <nav
       className={
@@ -26,16 +30,16 @@ const NavBar: NextComponentType = () => {
       }
     >
       <NavItem
-        navID="#top"
         className="font-[blast] mr-auto mt-1 flex flex-row px-6 lg:px-14 cursor-pointer h-fit text-[3rem] w-full lg:w-auto justify-between"
         noUnderline
+        onClick={scrollTop}
       >
         <span>Anupama D.</span>
         <AiOutlineBars className="w-12 my-auto lg:hidden" onClick={popUpNav} />
       </NavItem>
-      <NavItem content="About Me" nav={navbar} />
-      <NavItem content="My Work" nav={navbar} />
-      <NavItem content="Contact Me" nav={navbar} />
+      <NavItem content="About Me" navID="about" nav={navbar} />
+      <NavItem content="My Work" navID="work" nav={navbar} />
+      <NavItem content="Contact Me" navID="contact" nav={navbar} />
     </nav>
   );
 };

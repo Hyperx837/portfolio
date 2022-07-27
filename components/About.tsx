@@ -1,6 +1,6 @@
 import Image from "next/image";
 const About = () => (
-  <div className="flex flex-col bg-black  w-full lg:p-20">
+  <div className="flex flex-col bg-black  w-full lg:p-20" id="about">
     <span className="title">About Me</span>
     <div className="flex flex-col xl:flex-row w-full my-10">
       <div className="rounded-2xl  mb-10 w-[330px] overflow-clip xl:mr-20 grayscale mx-auto aspect-[1.15/1.1]">

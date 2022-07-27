@@ -1,5 +1,6 @@
 import { NextComponentType } from "next";
 import Image from "next/image";
+import { openURL } from "utils";
 
 interface Props {
   name: string;
@@ -17,9 +18,7 @@ const Project = ({ name, children, img, gh, web }: Props) => (
     <div className="flex flex-col w-10/12 mx-auto h-full">
       <a
         className="font-[Poppins] font-bold text-[2rem] text-center hover:underline  my-3 cursor-pointer"
-        href={`https://github.com/Hyperx837/${gh}`}
-        target="_blank"
-        rel="noreferrer"
+        onClick={openURL(`https://github.com/${gh}`)}
       >
         {name}
       </a>
@@ -27,10 +26,8 @@ const Project = ({ name, children, img, gh, web }: Props) => (
         {children}
       </p>
       <a
-        className="text-sky-600 mt-auto font-[Poppins] hover:underline decoration-sky-500"
-        href={`https://${web}`}
-        target="_blank"
-        rel="noreferrer"
+        className="text-sky-600 mt-auto font-[Poppins] hover:underline decoration-sky-500 cursor-pointer"
+        onClick={openURL(`https://${web}`)}
       >
         {web}
       </a>
@@ -39,7 +36,7 @@ const Project = ({ name, children, img, gh, web }: Props) => (
 );
 
 const Projects: NextComponentType = () => (
-  <div className="py-20 w-10/12 mx-auto">
+  <div className="py-20 w-10/12 mx-auto" id="work">
     <span className="title">My Work</span>
     <div className="flex flex-wrap mt-10 justify-evenly gap-y-16">
       <Project

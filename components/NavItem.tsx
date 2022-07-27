@@ -1,10 +1,13 @@
+import React from "react";
+
 interface Props {
   className?: string;
   content?: string;
-  navID?: string;
   nav?: boolean;
   noUnderline?: boolean;
   children?: React.ReactNode;
+  navID?: string;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
 }
 
 const NavItem = ({
@@ -14,9 +17,11 @@ const NavItem = ({
   navID,
   nav,
   noUnderline,
+  onClick,
 }: Props) => (
   <a
-    href={content ? `#${content.toLowerCase()}` : navID}
+    href={`#${navID ? navID : ""}`}
+    onClick={onClick}
     className={
       className ||
       (nav ? "block" : "hidden") +
