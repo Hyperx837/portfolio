@@ -88,7 +88,7 @@ const Projects: NextComponentType = () => (
       <Project
         name="Reverse Shell"
         img="reverse-shell.png"
-        gh="Hyperx837/Control-Computers"
+        gh="Hyperx837/Controler-Computers"
       >
         A simple reverse shell script that establishes a client server
         connection via sockets and allows commands to execute on client
