@@ -17,8 +17,8 @@ const About = () => {
   }, [count]);
 
   return (
-    <div className="flex lg:flex-row lg:pl-20  justify-around flex-col  mb-20">
-      <div className="flex justify-center lg:w-[45%] sm:w-full sm:mt-20 lg:m-0 overflow-clip rounded-full">
+    <div className="flex lg:flex-row lg:pl-20  justify-around flex-col  mb-20 min-h-[85vh]">
+      <div className="flex justify-center lg:w-[45%] sm:w-full sm:mt-20 lg:m-0 overflow-clip rounded-full max-h-[630px]">
         <Image
           src="/images/avatar.webp"
           alt="pic of my avatar"
@@ -31,7 +31,7 @@ const About = () => {
         <span className="text-[2.8rem] md:text-[4rem] lg:text-[4.5rem]  font-[Poppins]  leading-[4rem] lg:leading-[5rem]  mx-auto lg:mx-0 text-center lg:text-left text-glow">
           I am
           <br />
-          <span className="font-[brussels] text-gradient">
+          <span className="font-[brussels] text-gradient text-[3rem] lg:text-[4.5rem]">
             Anupama Dissanayake
           </span>
         </span>

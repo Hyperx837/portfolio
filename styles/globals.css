@@ -65,7 +65,7 @@ a {
     animation: glow 0.3s forwards;
   }
   .title {
-    @apply text-[4rem] xl:text-[5rem]  underline font-[blast] xl:w-[430px] text-center;
+    @apply text-[4rem] xl:text-[5rem]  underline font-[blast] xl:w-[430px] text-center w-full lg:w-auto;
   }
 }
 
