@@ -26,6 +26,7 @@ const About = () => {
           alt="pic of my avatar"
           width={560}
           height={630}
+          priority
         />
       </div>
       <div className="pl-2 flex flex-col  w-full lg:w-[55%] pt-16">

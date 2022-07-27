@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* fontfaces */
 @font-face {
   font-family: "brussels";
   src: url("/fonts/brussels.otf");
@@ -34,26 +35,37 @@ a {
   text-decoration: none;
 }
 
-.text-gradient {
-  background: linear-gradient(to right, #30cfd0, #c43ad6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(to right, #30cfd0, #c43ad6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 80px rgb(192 219 255 / 75%), 0 0 32px rgb(65 120 255 / 24%);
+  }
+
+  .blink {
+    animation: blink 0.8s infinite;
+  }
 }
 
-.text-glow {
-  text-shadow: 0 0 80px rgb(192 219 255 / 75%), 0 0 32px rgb(65 120 255 / 24%);
+@layer components {
+  .btn {
+    @apply font-[Poppins]  rounded-md text-3xl cursor-pointer bg-gray-200 text-black;
+    transition: glow 1 ease-in-out;
+  }
+
+  .btn:hover {
+    animation: glow 0.3s forwards;
+  }
+  .title {
+    @apply text-[4rem] xl:text-[5rem]  underline font-[blast] xl:w-[430px] text-center;
+  }
 }
 
-.blink {
-  animation: blink 0.8s infinite;
-}
-.btn {
-  @apply font-[Poppins]  rounded-md text-3xl cursor-pointer bg-gray-200 text-black;
-  transition: glow 1 ease-in-out;
-}
-.btn:hover {
-  animation: glow 0.3s forwards;
-}
+/* colors */
 .text-red {
   @apply text-red-400;
 }
@@ -67,6 +79,7 @@ a {
   @apply text-green-400;
 }
 
+/* keyframess */
 @keyframes blink {
   0% {
     opacity: 1;
