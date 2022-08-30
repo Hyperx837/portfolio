@@ -39,7 +39,7 @@ const NavBar: NextComponentType = () => {
       </NavItem>
       <NavItem content="About Me" navID="about" nav={navbar} />
       <NavItem content="My Work" navID="work" nav={navbar} />
-      <NavItem content="Contact Me" navID="contact" nav={navbar} />
+      {/* <NavItem content="Contact Me" navID="contact" nav={navbar} /> */}
     </nav>
   );
 };
