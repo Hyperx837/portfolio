@@ -6,7 +6,7 @@ const About = () => (
   >
     <span className="title">About Me</span>
     <div className="flex flex-col xl:flex-row w-full my-10">
-      <div className="rounded-2xl  mb-10 w-[330px] overflow-clip xl:mr-20 mx-auto aspect-[1.15/1.1]">
+      <div className="rounded-2xl  mb-10 w-[330px] overflow-clip xl:mr-20  mx-auto aspect-[1.15/1.1] relative">
         <Image src="/images/me.webp" alt="picture of me" layout="fill" />
       </div>
       <div className="font-[Montserrat] text-lg w-10/12 max-w-[50rem] mx-auto">
